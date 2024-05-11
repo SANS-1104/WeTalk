@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chats</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <h2>All Chats</h2>
+    <form action="/chats/new" method="get">
+        <button type="submit" class="new-chat">New Chat <span class="material-symbols-outlined"> edit </span></button>
+    </form>
+    <div class="chat-box">
+        <%for(chat of chats){%>
+            <div class="each-chat">
+                <div class="del-chat">
+                    <form method="post" action="/chats/<%= chat._id %>?_method=DELETE" onsubmit="return confirmDelete()">
+                        <button type="submit"><span class="material-symbols-outlined del-btn"> delete </span></button>
+                        
+                    </form> 
+                </div>
+                <div class="from-to">
+                    <p class="from"><%= chat.from %></p>
+                    <p class="arrow"><span class="material-symbols-outlined"> arrow_right_alt </span></p>
+                    <p class="to"><%= chat.to %></p>
+                </div>
+                <div class="msg-box">
+                    <p class="msg-label">Message &emsp;&emsp;&emsp; 
+                        <form action="/chats/<%=chat._id%>/edit" method="get"><a href="/chats/<%=chat._id%>/edit"><span class="material-symbols-outlined edit-btn"> edit_note </span></a></form>
+                    </p><br>
+                </div>
+                <p class="msg-text"> <%= chat.msg %></p>
+                <br><hr><br>
+                <div class="date-time">
+                    <p class="time">Time : <%= (chat.created_at).toString().split(" ")[4] %></p>
+                    <p class="date">Date : <%= (chat.created_at).toString().split(" ").slice(0,4).join(" ") %></p>
+                </div>
+            </div>
+        <%}%>
+    </div>
+
+    <script src="/index.js"></script>
+</body>
+</html>
+
+
+

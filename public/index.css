@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    text-decoration: underline;
+    color: rgb(128, 48, 64);
+}
+
+.chat-box{
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+    width: 90vw;
+    height: 30rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.each-chat{
+    border: 4px solid black;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    border-radius: 1.5rem;
+    margin-right: 5rem;
+    height: max-content;
+    width: max-content;
+    max-width: 18rem;
+    max-height: 20rem;
+}
+
+.from-to{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-family: "Briem Hand", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+.from-to .from , .from-to .to{
+    border: 4px solid black;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    font-weight: 600;
+}
+
+.from-to .from{
+    background-color: rgb(117, 235, 117);
+}
+.from-to .to{
+    background-color: rgb(216, 164, 164);
+}
+
+.arrow{
+    justify-self: center;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+
+.msg-box{
+    font-family: "Asap Condensed", sans-serif;
+    font-style: normal;
+    display: flex;
+}
+
+.msg-box .msg-label{
+    font-weight: 800;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.msg-text{
+    font-family: "Asap Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    background-color: plum;
+    padding: 1rem;
+    border-radius: 1rem;
+    overflow:auto;
+    max-height: 2rem;
+}
+
+.new-chat{
+    margin-left: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 4px solid black;
+    border-radius: 2rem;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+    background-color: rgb(246, 228, 213);
+}
+
+.date-time{
+    font-family: "Signika", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "GRAD" 0;
+}
+
+
+.msg-box p.msg-label span{
+    font-size: 2.5rem;
+}
+
+.del-chat form button{
+    background-color: white;
+    border: none;
+}
+
+.del-chat{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.del-msg form a{
+    text-decoration: none;
+}
+
+ form .del-btn{
+    color: rgb(237, 29, 29);
+    font-size: 1.75rem;
+}

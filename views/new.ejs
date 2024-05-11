@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Chat</title>
+    <link rel="stylesheet" href="/new.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <h2>Create New Chat here !</h2>
+
+    <form action="/chats" method="post">
+        <label for="from">From &nbsp;</label>
+        <input type="text" name="from" id="from" placeholder="from" required>
+        <br><br>
+        <label for="to">To &emsp; &nbsp;</label>
+        <input type="text" name="to" id="to" placeholder="to" required>
+        <br><br>
+        <label for="msg">Write Your Message</label>
+        <br>
+        <textarea name="msg" id="msg" cols="30" rows="5" required placeholder="Write your message here"></textarea>
+        <br><br>
+        <button type="submit">Create Chat</button>
+    </form>
+</body>
+</html>
